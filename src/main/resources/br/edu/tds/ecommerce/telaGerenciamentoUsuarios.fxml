@@ -11,11 +11,11 @@
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.ecommerce.TelaGerenciamentoUsuariosController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.ecommerce.TelaGerenciamentoUsuariosController">
    <top>
       <HBox alignment="CENTER" prefHeight="57.0" prefWidth="700.0" style="-fx-background-color: #964cb3;" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #964cb3; -fx-font-size: 20; -fx-font-weight: 800;" text="Gerenciamento de Usuarios" textFill="#fcfcfc" />
+            <Label alignment="CENTER" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #964cb3; -fx-font-size: 20; -fx-font-weight: 800;" text="Gerenciamento de Pilotos" textFill="#fcfcfc" />
          </children>
       </HBox>
    </top>
@@ -49,10 +49,10 @@
       </HBox>
    </bottom>
    <center>
-      <TableView fx:id="tabelaUsuarios" prefHeight="299.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tabelaUsuarios" prefHeight="299.0" prefWidth="700.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="colNomeCompleto" prefWidth="268.0" text="Nome Completo" />
-          <TableColumn fx:id="colUsuario" minWidth="0.0" prefWidth="129.0" text="Usuario" />
+          <TableColumn fx:id="colUsuario" minWidth="0.0" prefWidth="129.0" text="Piloto" />
             <TableColumn fx:id="colEmail" prefWidth="195.0" text="E-mail" />
             <TableColumn fx:id="colCPF" prefWidth="107.0" text="CPF" />
         </columns>

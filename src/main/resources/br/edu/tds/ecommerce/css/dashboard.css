@@ -7,18 +7,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Author     : alunos
 */
 .root {
-    -fx-font-family: "Arial";
+  -fx-font-family: "Arial";
 }
 
 /* =========================
    SIDEBAR
 ========================= */
 .sidebar {
-    -fx-background-color: linear-gradient(
-        to bottom,
-        #964cb3,
-        #964cb3
-    );
+  -fx-background-color: linear-gradient(to bottom, #964cb3, #964cb3);
 }
 
 /* =========================
@@ -26,19 +22,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 ========================= */
 
 .menu-button {
-    -fx-background-color: transparent;
-    -fx-text-fill: white;
-    -fx-font-size: 18px;
-    -fx-font-weight: bold;
-    -fx-cursor: hand;
-    -fx-alignment: CENTER-LEFT;
-    -fx-graphic-text-gap: 15;
-    -fx-padding: 15 20 15 20;
+  -fx-background-color: transparent;
+  -fx-text-fill: white;
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-cursor: hand;
+  -fx-alignment: CENTER-LEFT;
+  -fx-graphic-text-gap: 15;
+  -fx-padding: 15 20 15 20;
 }
 
 .menu-button:hover {
-    -fx-background-color: rgba(255,255,255,0.2);
-    -fx-background-radius: 12;
+  -fx-background-color: rgba(255, 255, 255, 0.2);
+  -fx-background-radius: 12;
 }
 
 /* =========================
@@ -46,16 +42,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 ========================= */
 
 .logout-button {
-    -fx-background-color: #e53935;
-    -fx-text-fill: white;
-    -fx-font-size: 18px;
-    -fx-font-weight: bold;
-    -fx-cursor: hand;
-    -fx-background-radius: 12;
-    -fx-padding: 12 20 12 20;
+  -fx-background-color: #e53935;
+  -fx-text-fill: white;
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-cursor: hand;
+  -fx-background-radius: 12;
+  -fx-padding: 12 20 12 20;
 }
 .logout-button:hover {
-    -fx-background-color: #c62828;
+  -fx-background-color: #c62828;
 }
 
 /* =========================
@@ -63,7 +59,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 ========================= */
 
 .dashboard-background {
-    -fx-background-color: #f4f6f9;
+  -fx-background-color: #f4f6f9;
 }
 
 /* =========================
@@ -71,18 +67,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 ========================= */
 
 .card {
-    -fx-background-color: white;
-    -fx-background-radius: 25;
-    -fx-cursor: hand;
-    -fx-padding: 20;
-    -fx-effect: dropshadow(
-        gaussian,
-        rgba(0,0,0,0.15),
-        15,
-        0,
-        3,
-        3
-    );
+  -fx-background-color: white;
+  -fx-background-radius: 25;
+  -fx-cursor: hand;
+  -fx-padding: 20;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 15, 0, 3, 3);
 }
 
 /* =========================
@@ -90,17 +79,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 ========================= */
 
 .card:hover {
-    -fx-scale-x: 1.04;
-    -fx-scale-y: 1.04;
-    -fx-background-color: #eef7ff;
-    -fx-effect: dropshadow(
-        gaussian,
-        rgba(0,0,0,0.30),
-        25,
-        0,
-        5,
-        5
-    );
+  -fx-scale-x: 1.04;
+  -fx-scale-y: 1.04;
+  -fx-background-color: #eef7ff;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 25, 0, 5, 5);
 }
 
 /* =========================
@@ -108,9 +90,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 ========================= */
 
 .card-title {
-    -fx-fill: #964cb3;
-    -fx-font-size: 28px;
-    -fx-font-weight: bold;
+  -fx-fill: #964cb3;
+  -fx-font-size: 28px;
+  -fx-font-weight: bold;
 }
 
 /* =========================
@@ -118,7 +100,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 ========================= */
 
 .card-subtitle {
-    -fx-fill: #777777;
-    -fx-font-size: 16px;
+  -fx-fill: #777777;
+  -fx-font-size: 16px;
 }
-

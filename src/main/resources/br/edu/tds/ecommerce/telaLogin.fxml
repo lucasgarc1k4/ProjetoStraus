@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.ecommerce.TelaLoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.ecommerce.TelaLoginController">
    <right>
-      <AnchorPane prefHeight="500.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="txtUsuario" layoutX="94.0" layoutY="237.0" promptText="Nome de usuario" style="-fx-border-color: #964cb3; -fx-border-width: 0px 0px 3px 0px; -fx-background-color: transparent;" />
             <PasswordField fx:id="txtSenha" layoutX="94.0" layoutY="295.0" promptText="Senha do usuario" style="-fx-background-color: transparent; -fx-border-color: #964cb3; -fx-border-width: 0 0 3 0;" />
