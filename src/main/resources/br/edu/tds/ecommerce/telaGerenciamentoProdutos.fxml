@@ -13,16 +13,16 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.ecommerce.TelaGerenciamentoProdutosController">
    <top>
-      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="700.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="700.0" style="-fx-background-color: #964cb3;" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #0598ff; -fx-font-size: 20; -fx-font-weight: 800;" text="Gerenciamento de Produtos" textFill="#fcfcfc" />
+            <Label alignment="CENTER" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #964cb3; -fx-font-size: 20; -fx-font-weight: 800;" text="Gerenciamento de Produtos" textFill="#fcfcfc" />
          </children>
       </HBox>
    </top>
    <bottom>
       <HBox alignment="CENTER" prefHeight="63.0" prefWidth="680.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#abrirTelaCadastroProduto" style="-fx-background-color: #0598ff;" text="+ Novo">
+            <Button mnemonicParsing="false" onAction="#abrirTelaCadastroProduto" style="-fx-background-color: #964cb3;" text="+ Novo">
                <textFill>
                   <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
                      <stops>
@@ -40,7 +40,7 @@
                   </RadialGradient>
                </textFill>
             </Button>
-            <Button mnemonicParsing="false" onAction="#editarProduto" style="-fx-background-color: #ffa500;" text="| Editar" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#editarProduto" style="-fx-background-color: #000000;" text="| Editar" textFill="WHITE" />
             <Button mnemonicParsing="false" onAction="#excluirProduto" style="-fx-background-color: #ff4d4d;" text="x Excluir" textFill="WHITE" />
          </children>
          <BorderPane.margin>

@@ -48,6 +48,33 @@ public class UsuarioDAO {
         }
     }
 
+    //Retorna o objeto Usuario após login
+    public Usuario loginComUsuario(String email, String senha) {
+        System.out.println("email: " + email);
+        System.out.println("senha: " + senha);
+        String sql = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
+        try (Connection conn = Conexao.conectar(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, email);
+            stmt.setString(2, senha);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                Usuario usuario = new Usuario();
+                usuario.setId(rs.getInt("id"));
+                usuario.setNomeCompleto(rs.getString("nomeCompleto"));
+                usuario.setNomeUsuario(rs.getString("nomeUsuario"));
+                usuario.setEmail(rs.getString("email"));
+                usuario.setSenha(rs.getString("senha"));
+                usuario.setCpf(rs.getString("cpf"));
+                usuario.setRole(rs.getString("role"));
+                return usuario;
+            }
+            return null;
+        } catch (Exception e) {
+            System.out.println("Erro no Login: " + e.getMessage());
+            return null;
+        }
+    }
+
     void atualizar(Usuario u) {
         String sql = "UPDATE usuarios SET nomeCompleto=?, nomeUsuario=?, email=?, senha=?, cpf=?, role=? WHERE nomeUsuario=?";
         try (Connection conn = Conexao.conectar();PreparedStatement stmt = conn.prepareCall(sql)){

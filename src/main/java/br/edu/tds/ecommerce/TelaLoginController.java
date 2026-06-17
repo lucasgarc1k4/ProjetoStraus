@@ -64,21 +64,33 @@ public class TelaLoginController {
         lblSenha.setText("");
 
         UsuarioDAO dao = new UsuarioDAO();
-        Boolean login = dao.login(usuario, senha);
-       
+        Usuario usuarioLogado = dao.loginComUsuario(usuario, senha);
 
-        if (login) {
+        if (usuarioLogado != null) {
             //Login com sucesso
-            System.out.println("Login feito");
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaGerenciamentoUsuarios.fxml"));
+            System.out.println("Login feito para: " + usuarioLogado.getNomeCompleto());
+            System.out.println("Role: " + usuarioLogado.getRole());
 
+            String tela;
+            String title;
+
+            // Redireção baseada no role
+            if ("admin".equalsIgnoreCase(usuarioLogado.getRole())) {
+                tela = "/br/edu/tds/ecommerce/telaGerenciamentoUsuarios.fxml";
+                title = "Gerenciamento de Usuários";
+            } else {
+                // client ou qualquer outro role
+                tela = "/br/edu/tds/ecommerce/dashboardCliente.fxml";
+                title = "Dashboard Cliente";
+            }
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(tela));
             Parent root = loader.load();
-
-            TelaGerenciamentoUsuariosController controller = loader.getController();
 
             //Trocando de tela
             Stage stage = (Stage) txtUsuario.getScene().getWindow();
             stage.setScene(new Scene(root));
+            stage.setTitle(title);
         } else {
             //Falha no login (usuário ou senha inválido)
             lblUsuario.setText("Usuário/Senha incorreto(a)");
@@ -90,36 +102,5 @@ public class TelaLoginController {
         System.out.println("Senha  : " + senha);
 
     }
-
-
-if (login) {
-
-   FXMLLoader loader = new FXMLLoader(
-           getClass().getResource(
-                   "/br/edu/tds/ecommerce/dashboard.fxml"
-           )
-   );
-
-   Parent root = loader.load();
-
-   DashboardController controller =
-           loader.getController();
-
-   Stage stage =
-           (Stage) txtUsuario.getScene().getWindow();
-
-   stage.setScene(new Scene(root));
-
-   // MAXIMIZA DASHBOARD
-   stage.setMaximized(true);
-
-   stage.show();
-
-} else {
-
-   lblUsuario.setText("Usuário/Senha incorreto(a)");
-   lblSenha.setText("Usuário/Senha incorreto(a)");
-
-   System.out.println("Falha no login");
 }
 

@@ -16,8 +16,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 .sidebar {
     -fx-background-color: linear-gradient(
         to bottom,
-        #0598ff,
-        #0277d8
+        #964cb3,
+        #964cb3
     );
 }
 
@@ -108,7 +108,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 ========================= */
 
 .card-title {
-    -fx-fill: #0598ff;
+    -fx-fill: #964cb3;
     -fx-font-size: 28px;
     -fx-font-weight: bold;
 }
