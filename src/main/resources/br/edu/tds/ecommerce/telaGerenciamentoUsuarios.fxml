@@ -7,6 +7,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
@@ -20,33 +21,51 @@
       </HBox>
    </top>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="63.0" prefWidth="680.0" spacing="20.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button mnemonicParsing="false" onAction="#abrirTelaCadastroUsuario" style="-fx-background-color: #964cb3;" text="+ Novo">
-               <textFill>
-                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </RadialGradient>
-               </textFill>
+      <BorderPane prefHeight="63.0" prefWidth="680.0" BorderPane.alignment="CENTER">
+         <left>
+            <Button mnemonicParsing="false" onAction="#abrirTelaLogin" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontIcon iconLiteral="fas-undo" iconSize="20" iconColor="#964cb3" />
+               </graphic>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#editarUsuario" style="-fx-background-color: #000000;" text="| Editar" textFill="WHITE" />
-            <Button mnemonicParsing="false" onAction="#excluirUsuario" style="-fx-background-color: #ff4d4d;" text="x Excluir" textFill="WHITE" />
-         </children>
-         <BorderPane.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </BorderPane.margin>
-      </HBox>
+         </left>
+         <center>
+            <HBox alignment="CENTER" prefHeight="63.0" prefWidth="520.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#abrirTelaCadastroUsuario" style="-fx-background-color: #964cb3;" text="+ Novo">
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#editarUsuario" style="-fx-background-color: #000000;" text="| Editar" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#excluirUsuario" style="-fx-background-color: #ff4d4d;" text="x Excluir" textFill="WHITE" />
+               </children>
+            </HBox>
+         </center>
+         <right>
+            <Button mnemonicParsing="false" onAction="#abrirTelaGerenciamentoVeiculos" style="-fx-background-color: transparent; -fx-font-weight: 700;" text="Veículos >>">
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+            </Button>
+         </right>
+      </BorderPane>
    </bottom>
    <center>
       <TableView fx:id="tabelaUsuarios" prefHeight="299.0" prefWidth="700.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">

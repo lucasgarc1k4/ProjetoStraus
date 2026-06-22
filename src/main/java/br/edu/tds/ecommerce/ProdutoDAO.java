@@ -36,4 +36,23 @@ public class ProdutoDAO {
             e.printStackTrace();
         }
     }
+
+    public void atualizarProduto(Produto p) throws SQLException {
+        String sql = "UPDATE produtos SET nome = ?, descricao = ?, categoria = ?, preco = ?, quantidade = ?, imagem = ?, ativo = ? WHERE id = ?";
+
+        try (Connection conn = Conexao.conectar(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, p.getNome());
+            stmt.setString(2, p.getDescricao());
+            stmt.setString(3, p.getCategoria());
+            stmt.setDouble(4, p.getPreco());
+            stmt.setInt(5, p.getQuantidade());
+            stmt.setString(6, p.getImagem());
+            stmt.setBoolean(7, p.isAtivo());
+            stmt.setInt(8, p.getId());
+            stmt.executeUpdate();
+            System.out.println("Produto atualizado com sucesso!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

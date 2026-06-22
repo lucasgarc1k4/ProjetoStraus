@@ -74,6 +74,26 @@ public class TelaGerenciamentoUsuariosController implements Initializable {
         stage.setScene(new Scene(root));
     }
 
+    @FXML
+    private void abrirTelaGerenciamentoVeiculos() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaGerenciamentoVeiculos.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) tabelaUsuarios.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Gerenciamento de Veículos");
+    }
+
+    @FXML
+    private void abrirTelaLogin() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaLogin.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) tabelaUsuarios.getScene().getWindow();
+        stage.setScene(new Scene(root, 700, 500));
+        stage.setTitle("Login");
+    }
+
     private void carregarUsuarios() {
 
         ObservableList<Usuario> listaUsuarios = FXCollections.observableArrayList();

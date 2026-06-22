@@ -5,13 +5,15 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.ecommerce.TelaCadastroVeiculosController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.ecommerce.TelaCadastroVeiculosController">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="254.0" style="-fx-background-color: #964cb3;" BorderPane.alignment="CENTER">
          <children>
@@ -25,16 +27,21 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Text>
-            <FontIcon iconColor="#fcfcfc" iconLiteral="fas-car" iconSize="50" layoutX="28.0" layoutY="362.0" />
-            <FontIcon iconColor="WHITE" iconLiteral="fas-truck" iconSize="50" layoutX="91.0" layoutY="360.0" />
-            <FontIcon iconColor="#f8f5f5" iconLiteral="fas-motorcycle" iconSize="50" layoutX="165.0" layoutY="360.0" />
+            <FontIcon iconColor="#fcfcfc" iconLiteral="fas-car" iconSize="50" layoutX="25.0" layoutY="500.0" />
+            <FontIcon iconColor="WHITE" iconLiteral="fas-truck" iconSize="50" layoutX="96.0" layoutY="501.0" text="" />
+            <FontIcon iconColor="#f8f5f5" iconLiteral="fas-motorcycle" iconSize="50" layoutX="177.0" layoutY="499.0" />
+            <ImageView fitHeight="181.0" fitWidth="179.0" layoutX="59.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Captura_de_tela_de_2026-06-22_16-51-47-removebg-preview.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </left>
    <center>
       <AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="446.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <FontIcon iconColor="#964cb3" iconLiteral="fas-car" iconSize="60" layoutX="193.0" layoutY="20.0" selectionEnd="0" />
+            <FontIcon iconColor="#964cb3" iconLiteral="fas-car" iconSize="60" layoutX="193.0" layoutY="53.0" selectionEnd="0" />
             <Text fill="#964cb3" layoutX="109.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar Veículo">
                <font>
                   <Font size="25.0" />

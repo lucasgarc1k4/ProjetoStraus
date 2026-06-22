@@ -105,7 +105,13 @@ public class TelaCadastroVeiculosController {
 
     @FXML
     private void cancelar() throws IOException {
-        voltarParaDashboard();
+        // Voltar para a tela de login
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaLogin.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) rootPane.getScene().getWindow();
+        stage.setScene(new Scene(root, 700, 500));
+        stage.setTitle("Login");
     }
 
     private void voltarParaDashboard() throws IOException {

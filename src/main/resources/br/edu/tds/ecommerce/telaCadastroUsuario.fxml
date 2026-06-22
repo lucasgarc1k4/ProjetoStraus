@@ -4,13 +4,15 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.ecommerce.TelaCadastroUsuarioController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.ecommerce.TelaCadastroUsuarioController">
    <left>
       <AnchorPane prefHeight="508.0" prefWidth="254.0" style="-fx-background-color: #964cb3;" BorderPane.alignment="CENTER">
          <children>
@@ -19,19 +21,14 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="66.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre-se ou ">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" layoutX="42.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use sua rede social">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Text>
-            <FontIcon iconColor="WHITE" iconLiteral="fab-facebook" iconSize="60" layoutX="20.0" layoutY="355.0" text="" />
-            <FontIcon iconColor="WHITE" iconLiteral="fab-tiktok" iconSize="50" layoutX="94.0" layoutY="352.0" />
-            <FontIcon iconColor="WHITE" iconLiteral="fab-google" iconSize="50" layoutX="159.0" layoutY="354.0" />
+            <FontIcon iconColor="WHITE" iconLiteral="fab-facebook" iconSize="60" layoutX="20.0" layoutY="432.0" text="" />
+            <FontIcon iconColor="WHITE" iconLiteral="fab-tiktok" iconSize="50" layoutX="96.0" layoutY="428.0" />
+            <FontIcon iconColor="WHITE" iconLiteral="fab-google" iconSize="50" layoutX="165.0" layoutY="428.0" />
+            <ImageView fitHeight="261.0" fitWidth="162.0" layoutX="37.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Captura_de_tela_de_2026-06-22_16-51-47-removebg-preview.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </left>

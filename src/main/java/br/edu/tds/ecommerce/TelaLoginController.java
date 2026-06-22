@@ -102,5 +102,16 @@ public class TelaLoginController {
         System.out.println("Senha  : " + senha);
 
     }
+
+    @FXML
+    private void abrirTelaCadastroVeiculos() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaCadastroVeiculos.fxml"));
+        Parent root = loader.load();
+
+        //Trocando de tela
+        Stage stage = (Stage) txtUsuario.getScene().getWindow();
+        stage.setScene(new Scene(root, 700, 600));
+        stage.setTitle("Cadastro de Veículos");
+    }
 }
 

@@ -5,12 +5,17 @@
 package br.edu.tds.ecommerce;
 
 import java.net.URL;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
@@ -95,7 +100,7 @@ public class TelaCadastroProdutosController implements Initializable {
     }
     
     @FXML
-    private void salvarProduto() throws SQLException{
+    private void salvarProduto() throws SQLException, IOException{
         
         txtNome.setStyle("-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0 0 3 0;");
         txtPreco.setStyle("-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0 0 3 0;");
@@ -118,8 +123,24 @@ public class TelaCadastroProdutosController implements Initializable {
             p.setAtivo(cAtivo.isSelected());
             
             ProdutoDAO dao = new ProdutoDAO();
+          if (produtoEdicao == null) {
             dao.cadastrarProduto(p);
             mostrarAlerta("Produto cadastrado com sucesso!");
+          } else {
+            // manter id do produto em edição
+            p.setId(produtoEdicao.getId());
+            dao.atualizarProduto(p);
+            mostrarAlerta("Produto atualizado com sucesso!");
+          }
+            
+          // Voltar para gerenciamento de veículos
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaGerenciamentoVeiculos.fxml"));
+          Parent root = loader.load();
+
+          TelaGerenciamentoVeiculosController controller = loader.getController();
+
+          Stage stage = (Stage) txtNome.getScene().getWindow();
+          stage.setScene(new Scene(root));
             
         }else{
             //corrigir informações do formulário
