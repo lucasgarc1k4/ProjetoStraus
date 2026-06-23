@@ -1,6 +1,7 @@
 package br.edu.tds.ecommerce;
 
 import java.io.IOException;
+import java.util.Arrays;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -36,6 +37,8 @@ public class TelaCadastroVeiculosController {
     private CheckBox cAtivo;
     @FXML
     private AnchorPane rootPane;
+
+    private Produto produtoAtual;
 
     @FXML
     private void initialize() {
@@ -88,10 +91,15 @@ public class TelaCadastroVeiculosController {
             );
 
             ProdutoDAO dao = new ProdutoDAO();
-            dao.cadastrarProduto(veiculo);
+            if (produtoAtual != null && produtoAtual.getId() > 0) {
+                veiculo.setId(produtoAtual.getId());
+                dao.atualizarProduto(veiculo);
+                System.out.println("Veículo atualizado com sucesso!");
+            } else {
+                dao.cadastrarProduto(veiculo);
+                System.out.println("Veículo cadastrado com sucesso!");
+            }
 
-            System.out.println("Veículo cadastrado com sucesso!");
-            
             // Voltar para dashboard
             voltarParaDashboard();
 
@@ -120,5 +128,32 @@ public class TelaCadastroVeiculosController {
 
         Stage stage = (Stage) rootPane.getScene().getWindow();
         stage.setScene(new Scene(root));
+    }
+
+    public void setProduto(Produto p) {
+        if (p == null) return;
+        this.produtoAtual = p;
+
+        String nome = p.getNome();
+        if (nome != null && !nome.isEmpty()) {
+            String[] parts = nome.split(" ");
+            if (parts.length >= 3) {
+                txtAno.setText(parts[parts.length - 1]);
+                txtMarca.setText(parts[0]);
+                String modelo = String.join(" ", Arrays.copyOfRange(parts, 1, parts.length - 1));
+                txtModelo.setText(modelo);
+            } else if (parts.length == 2) {
+                txtMarca.setText(parts[0]);
+                txtModelo.setText(parts[1]);
+            } else {
+                txtMarca.setText(nome);
+            }
+        }
+
+        txtDescricao.setText(p.getDescricao());
+        cbTipo.setValue(p.getCategoria());
+        txtPreco.setText(String.valueOf(p.getPreco()));
+        txtImagem.setText(p.getImagem());
+        cAtivo.setSelected(p.isAtivo());
     }
 }

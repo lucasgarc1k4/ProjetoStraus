@@ -48,7 +48,7 @@ public class TelaGerenciamentoVeiculosController implements Initializable {
 
     @FXML
     private void abrirTelaCadastroProdutos() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaCadastroProdutos.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaCadastroVeiculos.fxml"));
         Parent root = loader.load();
 
         Stage stage = (Stage) tabelaProdutos.getScene().getWindow();
@@ -107,10 +107,10 @@ public class TelaGerenciamentoVeiculosController implements Initializable {
         }
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaCadastroProdutos.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaCadastroVeiculos.fxml"));
             Parent root = loader.load();
 
-            TelaCadastroProdutosController controller = loader.getController();
+            TelaCadastroVeiculosController controller = loader.getController();
             controller.setProduto(pSelecionado);
 
             Stage stage = (Stage) tabelaProdutos.getScene().getWindow();
